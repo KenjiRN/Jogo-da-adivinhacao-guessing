@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+:root{    /*ADAPTADOR DE LAYOUT*/
+    font-size: 62.5%;
+}
+body{
+    background: linear-gradient(287.56deg, #c2e9fb 0%, #a1c4fd 100%);
+    font-size: 1.6rem;
+}
+
+main{
+    background: #ffffff;
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0,0.1);
+    border-radius: .6rem;
+    padding: 4.8rem 6.4rem 6.4rem;
+    border: 1px red solid;
+    width: 42.5rem;
+    height: 20.0rem;
+    margin: 20rem auto;
+}
