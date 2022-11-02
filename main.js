@@ -1,10 +1,15 @@
+const btnTry = document.querySelector('#btnTry')
+//variavel que associa a ID do primeiro botao
+
+
+const btnReset = document.querySelector('#btnReset')
+//variavel que associa a id do segundo botao.  
+
 const randomNumber = Math.round(Math.random()*10)
 //Atraves desta será definido a aleatoriedade de um número de 1 a 10
 
 let xAttempts = 1
 //Indica o número de tentativas
-
-
 
 
 //=============================================================================================================================================
@@ -37,25 +42,29 @@ if(Number(inputNumber.value) == randomNumber){
 //função chave que definirá quando cada Layout aparecerá/sumirá
 
 
-
+function handleResetClick(event){
+    document.querySelector(".screen1").classList.remove("hide")     //OU SEJA SE CLCIAR PARA RESETAR VAI REMOVER O HIDE DA TELA 1 E ATIVAR O HIDE DA TELA 2
+    document.querySelector(".screen2").classList.add("hide")
+    xAttempts = 1
+    
+}
 
 
 
 
 
 //EVENTOS=======================================================================================================================================
-const btnTry = document.querySelector('#btnTry')
-//variavel que associa a ID do primeiro botao
-
-const btnReset = document.querySelector('#btnReset')
-//variavel que associa a id do segundo botao.  
 
 btnTry.addEventListener('click', handleTryClick)
 //pega a variavel e adiciona um evento a ela, toda vez que eu clicar ativará a função
 
 
-btnReset.addEventListener('click', function(){
-    document.querySelector(".screen1").classList.remove("hide")     //OU SEJA SE CLCIAR PARA RESETAR VAI REMOVER O HIDE DA TELA 1 E ATIVAR O HIDE DA TELA 2
-    document.querySelector(".screen2").classList.add("hide")
-    xAttempts = 1
-})
+btnReset.addEventListener('click', handleResetClick)
+
+
+//ABAIXO OUTRA ALTERNATIVA QUE NAO SEJA POR MEIO DA FUNCTION
+// btnReset.addEventListener('click', function(){
+//     document.querySelector(".screen1").classList.remove("hide")     //OU SEJA SE CLCIAR PARA RESETAR VAI REMOVER O HIDE DA TELA 1 E ATIVAR O HIDE DA TELA 2
+//     document.querySelector(".screen2").classList.add("hide")
+//     xAttempts = 1
+// })
